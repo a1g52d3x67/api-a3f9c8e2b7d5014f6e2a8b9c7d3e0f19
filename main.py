@@ -1,4 +1,1 @@
-# main.py
-# Ejecutable en XploitOS (Pyodide)
-
-print('Hola desde main.py')
+from telegram import Update from telegram.ext import Application, CommandHandler, ContextTypes TOKEN = "8964315899:AAFTQT_x3QjDVN3XZyV3eXaQBOHDm9PoLlk" async def hola(update: Update, context: ContextTypes.DEFAULT_TYPE): await update.message.reply_text("hola") def main(): app = Application.builder().token(TOKEN).build() app.add_handler(CommandHandler("hola", hola)) print("Bot iniciado...") app.run_polling() if __name__ == "__main__": main()
